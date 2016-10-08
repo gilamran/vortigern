@@ -8,12 +8,15 @@
     "inlineSources": false,
     "experimentalDecorators": true,
     "jsx": "react",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "lib": ["es2016", "dom"],
+    "types": ["node", "redux"]
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
     "node_modules",
-    "build",
-    "typings/main",
-    "typings/main.d.ts"
+    "build"
   ]
 }

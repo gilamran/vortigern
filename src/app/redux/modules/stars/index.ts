@@ -37,7 +37,7 @@ export function starsReducer(state = initialState, action: IStarsAction) {
 }
 
 /** Async Action Creator */
-export function getStars(): Redux.Dispatch {
+export function getStars(): Redux.Dispatch<any> {
   return dispatch => {
     dispatch(starsRequest());
 
