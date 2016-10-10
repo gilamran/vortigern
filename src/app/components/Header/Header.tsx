@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 class Header extends React.Component<any, any> {
   public render() {
-    const s = require('./style.css');
+    const s = require('./Header.css');
 
     return (
       <nav className={s.nav}>

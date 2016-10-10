@@ -5,7 +5,7 @@ import { Header } from '../../components';
 
 class App extends React.Component<any, any> {
   public render() {
-    const s = require('./style.css');
+    const s = require('./App.css');
 
     return (
       <section className={s.appContainer}>

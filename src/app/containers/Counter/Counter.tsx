@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { increment, decrement } from '../../redux/modules/counter/';
+import { increment, decrement } from '../../redux/modules/counter';
 import { ICounter } from '../../models/counter';
 const { connect } = require('react-redux');
-const s = require('./style.css');
+const s = require('./Counter.css');
 
 interface IProps {
   counter: ICounter;
@@ -27,13 +27,15 @@ class Counter extends React.Component<IProps, void> {
         <h4>Counter Example</h4>
         <button
           name="incBtn"
-          onClick={increment}>
+          onClick={increment}
+        >
             INCREMENT
         </button>
         <button
           name="decBtn"
           onClick={decrement}
-          disabled={counter.count <= 0}>
+          disabled={counter.count <= 0}
+        >
             DECREMENT
         </button>
         <p>{counter.count}</p>

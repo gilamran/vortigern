@@ -18,13 +18,13 @@ const store = configureStore(
 );
 const history = syncHistoryWithStore(browserHistory, store);
 
+const render = props => <ReduxAsyncConnect {...props}/>;
+
 ReactDOM.render(
   <Provider store={store} key="provider">
     <Router
       history={history}
-      render={(props) =>
-        <ReduxAsyncConnect {...props} />
-      }
+      render={render}
     >
       {routes}
     </Router>

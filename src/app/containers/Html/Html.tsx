@@ -26,7 +26,7 @@ class Html extends React.Component<IHtmlProps, {}> {
 
     const scripts = this.resolve(['vendor.js', 'app.js']);
     const renderScripts = scripts.map((src, i) =>
-      <script src={src} key={i}></script>
+      <script src={src} key={i}/>
     );
 
     // tslint:disable-next-line:max-line-length
@@ -45,7 +45,7 @@ class Html extends React.Component<IHtmlProps, {}> {
           <link rel="shortcut icon" href="/favicon.ico" />
         </head>
         <body>
-          <main id="app" dangerouslySetInnerHTML={{ __html: markup }}></main>
+          <main id="app" dangerouslySetInnerHTML={{ __html: markup }}/>
           {initialState}
           {renderScripts}
         </body>
